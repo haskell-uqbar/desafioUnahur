@@ -1,2 +1,4 @@
-# desafioUnahur
-Ejemplo de programacion funcional unahur
+# Desafio Unahur
+Parcial de programacion funcional Unahur
+
+![](parcialfuncional.jpg)
