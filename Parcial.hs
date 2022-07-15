@@ -53,7 +53,7 @@ esPositiva _ = False
 data Arbol a = Hoja a | Nodo a (Arbol a) (Arbol a) (Arbol a)
 
 foldrArbol:: ( a-> b-> b ) -> b -> Arbol a ->  b 
-foldrArbol f semilla (Hoja elemento) = f x semilla 
+foldrArbol f semilla (Hoja x) = f x semilla 
 foldrArbol f semilla (Nodo x arbol1 arbol2 arbol3) = 
     f x (foldrArbol f (foldrArbol f (foldrArbol f semilla arbol3) arbol2) arbol1) 
 
@@ -70,13 +70,3 @@ otroArbol = Nodo 5 unaHoja unaHoja otraHoja
 --foldlArbol f semilla (Hoja x) = f semilla x
 --foldlArbol f semilla (Nodo x arbol1 arbol2 arbol3) = 
 --    foldlArbol f (foldlArbol f (foldlArbol f (f semilla x) arbol3) arbol2) arbol1
-
-
-
-
--- foldArbol (\x y -> max x (f (valor y)) ) (valor unArbol) unArbol
-
-
-
-
-
